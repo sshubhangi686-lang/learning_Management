@@ -1,0 +1,46 @@
+/* Banner animation */
+.lg-banner {
+  display: inline-block;
+}
+
+/* Slide-in animation */
+.lg-enter {
+  animation: lgSlideIn 600ms ease-out forwards;
+}
+
+/* Normal state (no animation) */
+.lg-idle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide-out animation */
+.lg-leave {
+  animation: lgSlideOut 500ms ease-in forwards;
+}
+
+@keyframes lgSlideIn {
+  0% {
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-5px) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes lgSlideOut {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px) scale(0.96);
+    opacity: 0;
+  }
+}
